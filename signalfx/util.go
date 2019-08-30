@@ -208,7 +208,7 @@ func getColorScaleOptions(d *schema.ResourceData) []*chart.SecondaryVisualizatio
 }
 
 func getValueUsingMaxFloatAsDefault(v float64) *float32 {
-	if v >= math.MaxFloat32 || v <= -math.MaxFloat32 {
+	if v >= math.MaxInt32 || v <= -math.MaxInt32 {
 		return nil
 	}
 	vf := float32(v)
